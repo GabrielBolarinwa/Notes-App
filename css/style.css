@@ -1,0 +1,214 @@
+/*Imports*/
+@import url("fonts.css");
+@import url("variables.css");
+
+/*CSS Reset*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 0.5s;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+    overflow-x: hidden;
+}
+
+body {
+    min-height: 100vh;
+    font-size: var(--font-size-default);
+    font-weight: lighter;
+    position: relative;
+    background: linear-gradient(135deg, #cf9aff, #95c0ff);
+    color: #fff;
+}
+
+body ul {
+    padding-left: var(--size-value-big);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--serif-font-3);
+    font-weight: 900;
+}
+
+h1 {
+    font-size: var(--font-size-large);
+}
+
+h2 {
+    font-size: var(--font-size-big);
+}
+
+h3 {
+    font-size: var(---font-size-medium);
+}
+
+table,
+tr,
+td,
+th,
+caption {
+    border: var(--border-default);
+    border-collapse: collapse;
+    padding: var(--size-value-small);
+    font-family: var(--sans-serif-font-1);
+}
+
+button {
+    font-weight: bold;
+    border: none;
+    border-radius: var(--border-radius-default);
+    padding: var(--size-value-small);
+    transform: scale(1);
+    cursor: pointer;
+}
+
+button:active {
+    transform: scale(0.96);
+    transition: 0.25s linear;
+}
+
+ul {
+    list-style-type: square;
+}
+
+ul li::marker {
+    color: turquoise;
+    font-size: var(--font-size-medium);
+}
+
+a {
+    color: var(--color-blue-light);
+    text-decoration: none;
+    transition: none;
+}
+
+a:visited {
+    color: var(--color-purple);
+}
+
+a:hover {
+    text-decoration: underline;
+    transition: 0.25s;
+}
+
+a:active {
+    color: var(--color-red);
+    transition: none;
+}
+
+input,
+button,
+textarea {
+    font: inherit;
+}
+
+input:is([type="text"], [type="number"]):focus {
+    outline: none;
+}
+
+input[type="checkbox"] {
+    transform: scale(1.5);
+    margin: 0 12px 0 3px;
+}
+
+/*Reset End*/
+
+/*Utility Classes*/
+
+.nowrap {
+    white-space: nowrap;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.box-center1 {
+    display: block;
+    margin: auto;
+}
+
+.box-center2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* End Utitlity Classes */
+
+main {
+    padding: var(--size-value-large);
+}
+
+.main__h1 {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-weight: 600;
+}
+
+.main__h1 .notes-icon {
+    /* font-size: var(--font-size-medium); */
+    padding: var(--size-value-small);
+    color: var(--color-blue);
+}
+
+main .create-btn.main__button {
+    display: flex;
+    align-items: center;
+    background: linear-gradient(#9418fd, #571094);
+    font-size: var(--font-size-default);
+    color: #fff;
+    border-radius: 40px;
+    padding: var(--size-value-normal);
+    margin: 0 0 var(--size-value-normal);
+    cursor: pointer;
+}
+
+main .notes-container {
+    display: flex;
+    width: 100%;
+    height: auto;
+    flex-flow: row wrap;
+}
+.notes-container .input-box {
+    background: #fff;
+    color: #333;
+    padding: var(--size-value-normal);
+    margin: var(--size-value-normal);
+    outline: none;
+    border-radius: 5px;
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    min-height: 150px;
+}
+
+.input-box .delete-icon {
+    font-size: var(--font-size-normal);
+    width: calc(25px + 1.25vw);
+    height: auto;
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    cursor: pointer;
+}
